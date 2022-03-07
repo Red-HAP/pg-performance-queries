@@ -18,7 +18,7 @@ The directory `./locks` holds queries that will help track blocked queries due t
 
 #### WARNING
 
-You will be able to see query parameters when using these statements. Be careful that sensitive information is not leaked.
+⚠ You will be able to see query parameters when using these statements. Be careful that sensitive information is not leaked.
 
 ### Statistics
 
@@ -26,4 +26,4 @@ The directory `./stats` holds queries that will gather information from the stat
 
 #### WARNING
 
-You will be able to see query parameters when using these statements. Be careful that sensitive information is not leaked.
+⚠ You will be able to see query parameters when using these statements. Be careful that sensitive information is not leaked.
