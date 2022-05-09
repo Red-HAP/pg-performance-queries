@@ -5,7 +5,7 @@ select d.datname as "database",
        s.rows,
        s.mean_time,
        s.max_time,
-       s.query
+       left(s.query, 100) as "query_abbrev"
   from public.pg_stat_statements s
   left
   join pg_database d
@@ -15,7 +15,7 @@ select d.datname as "database",
     on r.oid = s.userid
  where r.rolname != 'rdsadmin'
  order
-    by d.datname,
+    by case when d.datname in ('koku', 'postgres') then 1 else 0 end::int,
        s.mean_time
  limit 25
 ;
